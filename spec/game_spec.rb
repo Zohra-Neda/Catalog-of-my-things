@@ -9,7 +9,6 @@ describe Game do
 
   context 'When you create a instance of the game' do
     it 'has a multiplayer, archived and last_played_at' do
-
       game = Game.new(arr)
 
       expect(game.multiplayer).to eq('John')
