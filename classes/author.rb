@@ -10,15 +10,4 @@ class Author < Item
     @first_name = params['first_name']
     @last_name = params['last_name']
   end
-
 end
-
-arr = {
-    'id' => 122,
-    'first_name' => 'Yemi',
-    'last_name' => 'Dada'
-  }
-
-author = Author.new(arr)
-
-author.add_item
