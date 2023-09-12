@@ -19,5 +19,4 @@ class Game < Item
   def can_be_archived?
     super && (Date.today - @played_at_date).to_i / 365 > 2
   end
-  
 end
