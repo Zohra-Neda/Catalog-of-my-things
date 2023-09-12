@@ -1,6 +1,6 @@
 require_relative 'item'
 
-class Book < Item
+class MusicAlbum < Item
   attr_accessor :on_spotify
 
   def initialize(params)
