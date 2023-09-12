@@ -6,8 +6,8 @@ class Game < Item
   def initialize(params)
     super(params)
 
-    @multiplayer = params[:multiplayer]
-    @last_played_at = params[:last_played_at]
+    @multiplayer = params['multiplayer']
+    @last_played_at = params['last_played_at']
   end
 
   def can_be_archived?
