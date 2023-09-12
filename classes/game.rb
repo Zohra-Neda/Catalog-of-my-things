@@ -12,7 +12,6 @@ class Game < Item
 
   def create_date(date_string)
     return nil if date_string.nil?
-
     Date.parse(date_string.to_s)
   end
 
