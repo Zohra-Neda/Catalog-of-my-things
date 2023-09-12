@@ -7,6 +7,7 @@ class Author < Item
   def initialize(params)
     super(params)
 
+    @id = params['id']
     @first_name = params['first_name']
     @last_name = params['last_name']
     @items = []
