@@ -2,7 +2,7 @@ require_relative '../classes/author'
 
 describe Author do
   arr = {
-    'id' =>122,
+    'id' => 122,
     'first_name' => 'Yemi',
     'last_name' => 'Dada'
   }

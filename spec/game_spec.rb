@@ -3,9 +3,9 @@ require_relative '../classes/game'
 describe Game do
   arr = {
     'multiplayer' => 'John',
-    'archived' =>true,
+    'archived' => true,
     'last_played_at' => '2022-01-01'
-  };
+  }
 
   context 'When you create a instance of the game' do
     it 'has a multiplayer, archived and last_played_at' do
