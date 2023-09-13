@@ -10,4 +10,11 @@ class Author < Item
     @first_name = params['first_name']
     @last_name = params['last_name']
   end
+
+  def add_item(item)
+    return if @items.include?(item)
+
+    @Items << item
+    item.add_author(self)
+  end
 end
