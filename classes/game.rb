@@ -6,7 +6,7 @@ class Game < Item
 
   def initialize(params)
     super(params)
-  
+
     @multiplayer = params['multiplayer']
     @last_played_at = create_date(params['last_played_at'])
   end
