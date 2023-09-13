@@ -1,12 +1,17 @@
+require_relative 'classes/item'
+require_relative 'modules/modules'
+
 class App
+  include Modules
+
   def initialize
-    puts 'Catalog og my things ☺️'
     @books = []
-    @music_albums = []
-    @games = []
-    @genres = []
     @labels = []
+    @music_albums = []
+    @genres = []
+    @games = []
     @authors = []
+    load_collection
   end
 
   def option_methods(option)
@@ -24,32 +29,37 @@ class App
   def list(option)
     case option
     when 1
-      puts 'list_all_books'
+      list_all_books
     when 2
-      puts 'list_all_music_albums'
+      list_all_music
     when 3
-      puts 'list_of_games'
+      list_all_games
     when 4
-      puts 'list_all_genres'
+      list_all_genres
     when 5
-      puts 'list_all_labels'
+      list_all_labels
     else
-      puts 'list_all_authors'
+      list_all_authors
     end
   end
 
   def add(option)
     case option
     when 7
-      puts 'add_book'
+      add_book
     when 8
-      puts 'add_music_album'
+      add_music
     else
-      puts 'add_game'
+      loop do
+        add_game
+        display_msg
+        break unless continue_option == 'y'
+      end
     end
   end
 
   def save_and_exit
+    save_collection
     exit
   end
 end

@@ -1,26 +1,27 @@
 require_relative 'app'
 
 def app_intro
-  puts 'Welcome to catalog of my things!'
+  puts 'Welcome to Catalog of my things!'
   app = App.new
   loop do
     display_options
     option = user_input
     app.option_methods(option)
+
     break if option == 10
   end
 end
 
 def display_options
-  puts 'Please choose one of the below options: '
+  puts 'Please choose one of the options: '
   puts '1 - List all books'
   puts '2 - List all music albums'
-  puts '3 - List all games'
-  puts '4 - List all music genres'
+  puts '3 - List of games'
+  puts '4 - List all genres'
   puts '5 - List all labels'
   puts '6 - List all authors'
   puts '7 - Add a book'
-  puts '8 - Add a music albums'
+  puts '8 - Add a music album'
   puts '9 - Add a game'
   puts '10 - Exit'
 end
