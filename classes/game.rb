@@ -1,23 +1,26 @@
 require_relative 'item'
 require 'date'
-
 class Game < Item
-  attr_accessor :multiplayer, :last_played_at
+  attr_accessor :multiplayer, :played_at_date
+  attr_reader :authors
 
   def initialize(params)
     super(params)
-
-    @multiplayer = params['multiplayer']
-    @last_played_at = create_date(params['last_played_at'])
+    @multiplayer = params[:multiplayer]
+    @played_at_date = params[:played_at_date]
   end
 
-  def create_date(date_string)
-    return nil if date_string.nil?
-
-    Date.parse(date_string.to_s)
+  def to_hash
+    {
+      publish_date: @publish_date,
+      multiplayer: @multiplayer,
+      played_at_date: @played_at_date
+    }
   end
 
-  def can_be_archived?
+  private
+
+  def can_be_archived
     super && (Date.today - @played_at_date).to_i / 365 > 2
   end
 end
