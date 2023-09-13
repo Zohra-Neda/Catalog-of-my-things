@@ -1,5 +1,6 @@
 require_relative '../classes/game'
 require_relative '../classes/author'
+require 'rspec'
 require 'date'
 
 RSpec.describe Game do

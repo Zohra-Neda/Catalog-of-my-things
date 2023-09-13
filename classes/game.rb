@@ -10,26 +10,17 @@ class Game < Item
     @played_at_date = params[:played_at_date]
   end
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    @multiplayer = params['multiplayer']
-    @last_played_at = create_date(params['last_played_at'])
+  def to_hash
+    {
+      publish_date: @publish_date,
+      multiplayer: @multiplayer,
+      played_at_date: @played_at_date
+    }
   end
 
->>>>>>> 5944ea7d437137043bdd6764bb2e7ca61efcc98f
-  def create_date(date_string)
-    return nil if date_string.nil?
-
-    Date.parse(date_string.to_s)
-  end
-
-  def can_be_archived?
-=======
   private
 
   def can_be_archived
->>>>>>> 51de56f1f115c6dec989d57728d5480527962e85
     super && (Date.today - @played_at_date).to_i / 365 > 2
   end
 end
