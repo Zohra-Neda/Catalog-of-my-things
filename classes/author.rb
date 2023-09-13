@@ -7,16 +7,14 @@ class Author < Item
   def initialize(params)
     super(params)
 
-    @id = params['id']
-    @first_name = params['first_name']
-    @last_name = params['last_name']
+    @id = params[:id] || rand(1..10_000)
+    @first_name = params[:first_name]
+    @last_name = params[:last_name]
     @items = []
   end
 
   def add_item(item)
-    return if @items.include?(item)
-
-    @Items << item
-    item.add_author(self)
+    @items << item unless @items.include?(item)
+    item.add_label(self)
   end
 end

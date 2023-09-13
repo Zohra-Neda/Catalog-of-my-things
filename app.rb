@@ -49,9 +49,10 @@ class App
       add_book
     when 8
       add_music
+    when 9
+      add_game
     else
       loop do
-        add_game
         display_msg
         break unless continue_option == 'y'
       end

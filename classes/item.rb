@@ -18,6 +18,7 @@ class Item
 
   def add_author(author)
     @author = author
+    @author.items.push(self)
   end
 
   def add_label(label)
