@@ -1,5 +1,5 @@
 require_relative 'classes/item'
-require_relative 'modules/modules'
+require_relative 'data_handlers/modules'
 
 class App
   include Modules
