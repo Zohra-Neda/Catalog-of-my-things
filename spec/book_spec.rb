@@ -32,11 +32,11 @@ RSpec.describe Book do
   end
 
   describe '#can_be_archived?' do
-    context 'when the book is over 10 years old' do
+    context 'when cover_state is bad' do
       it 'returns true' do
-        book = Book.new(book_params)
-
-        expect(book.can_be_archived?).to be_truthy
+        book.cover_state = 'bad'
+        book.move_to_archive
+        expect(book.send(:can_be_archived?)).to be_truthy
       end
     end
 
