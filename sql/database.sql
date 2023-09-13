@@ -1,26 +1,21 @@
+CREATE DATABASE catalogue_of_things;
 
-CREATE TABLE IF NOT EXISTS IF NOT EXISTS "author" (
-     "id" INT PRIMARY KEY,
-    "first_name" varchar,
-    "last_name" varchar
+CREATE TABLE books (
+  id INT GENERATED ALWAYS AS IDENTITY,
+  publish_date DATE,
+  label_id INT REFERENCES labels(id),
+  author_ID INT REFERENCES authors(id),
+  genre_ID INT REFERENCES genre(id),
+  can_be_archived BOOLEAN,
+  cover_state VARCHAR(250),
+  publisher VARCHAR(250),
+  PRIMARY KEY(id)
 );
 
-CREATE TABLE IF NOT EXISTS "game" (
-     "id" INT PRIMARY KEY,
-    "last_played_at" date,
-    "multiplayer" varchar,
-    "item_id" INT
+CREATE TABLE labels (
+ id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+ color VARCHAR(255),
+ title VARCHAR(255),
+ items TEXT
+ []
 );
-ALTER TABLE "game" ADD FOREIGN KEY ("item_id") REFERENCES "item"("id");
-
-
-CREATE TABLE IF NOT EXISTS "item" (
-    "id" INT PRIMARY KEY,
-    "genre" int4,
-    "author" INT,
-    "source" INT,
-    "label" INT,
-    "publisher_date" date,
-    "archive" bool
-);
-ALTER TABLE "item" ADD FOREIGN KEY ("author") REFERENCES "author"("id");

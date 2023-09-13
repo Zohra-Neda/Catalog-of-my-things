@@ -15,7 +15,7 @@ module SaveBookAndLabelData
         label: book.label
       }
     end
-    save_to_file('data/book.json', books_hash)
+    save_to_file('store_data/book.json', books_hash)
   end
 
   def save_label
@@ -26,6 +26,6 @@ module SaveBookAndLabelData
         title: label.title
       }
     end
-    save_to_file('data/label.json', label_hash)
+    save_to_file('store_data/label.json', label_hash)
   end
 end
