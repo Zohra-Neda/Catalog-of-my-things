@@ -1,10 +1,10 @@
 require 'date'
 require_relative '../classes/genre'
+require_relative '../classes/item'
 
 describe Genre do
   let(:params) { { name: 'Rock' } }
   let(:genre) { Genre.new(params) }
-  let(:item1) { double('Item1') }
 
   describe '#initialize' do
     it 'should set the name, generate an id, and initialize an empty items array' do
@@ -16,16 +16,16 @@ describe Genre do
   end
 
   describe '#add_item' do
+    let(:item) { Item.new(id: 1, genre: 'Rock', author: 'Artist', label: 'Label', publish_date: '2000-01-01') }
+
     it 'should add an item to the genre and associate the genre with the item' do
-      expect(item1).to receive(:add_genre).with(genre).once
-      genre.add_item(item1)
-      expect(genre.items).to include(item1)
+      genre.add_item(item)
+      expect(genre.items).to include(item)
+      expect(item.genre).to eq(genre)
     end
 
     it 'should not add the same item multiple times' do
-      expect(item1).to receive(:add_genre).with(genre).once
-      genre.add_item(item1)
-      genre.add_item(item1) # We expect it to be called once, so it should not be added again.
+      2.times { genre.add_item(item) }
       expect(genre.items.length).to eq(1)
     end
   end
