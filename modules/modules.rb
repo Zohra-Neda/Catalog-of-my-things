@@ -2,7 +2,6 @@ require_relative 'book_label/book_label'
 require_relative 'book_label/load_book_label'
 require_relative 'book_label/save_book_label'
 
-
 module Modules
   include BookAndLabel
   include LoadBookAndLabelData
