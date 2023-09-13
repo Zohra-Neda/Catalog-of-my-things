@@ -15,7 +15,7 @@ class Author < Item
 
   def add_item(item)
     return if @items.include?(item)
-    
+
     @Items << item
     item.add_author(self)
   end
