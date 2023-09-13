@@ -9,8 +9,6 @@ class Book < Item
     @cover_state = params[:cover_state]
   end
 
-  private
-
   def can_be_archived?
     return true if super || @cover_state == 'bad'
 
