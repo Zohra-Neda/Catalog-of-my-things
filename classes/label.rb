@@ -3,10 +3,10 @@ class Label
   attr_reader :id, :items
 
   def initialize(params)
-    @id = rand(1..10_000)
+    @id = rand(1..100_000)
+    @items = []
     @title = params[:title]
     @color = params[:color]
-    @items = []
   end
 
   def add_item(item)

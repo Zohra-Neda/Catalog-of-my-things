@@ -1,18 +1,16 @@
-require_relative 'item'
-
-class Genre < Item
-  attr_accessor :name
-  attr_reader :id, :items
+class Genre
+  attr_accessor :id, :items, :name
 
   def initialize(params)
-    super(params)
-    @id = rand(1..10_000)
+    @id = params[:id] || rand(1..1000)
     @name = params[:name]
     @items = []
   end
 
   def add_item(item)
-    @items << item unless @items.include?(item)
+    return if @items.include?(item)
+
+    @items << item
     item.add_genre(self)
   end
 end

@@ -31,6 +31,8 @@ After you're finished please remove all the comments and instructions!
 
   <h3><b>Catalog of my things</b></h3>
 
+  ![UML Class Diagram of Catalog of my things](UML-Class-Diagram.png)
+
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -95,7 +97,7 @@ Start using the app today to create a personalized catalog of your favorite book
 
 ## 🚀 Project Presentation Video <a name="project-presentation-video"></a>
 
-- <a href="" target="_blank">Project Presentation Video Link</a>
+- <a href="https://drive.google.com/file/d/1QNd-UiTDEsVLoR5ZxPiheNt93YbOKxAz/view?usp=sharing" target="_blank">Project Presentation Video Link</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -143,7 +145,7 @@ rspec spec
 - **Add a Music Album** - Add your favourite music album.
 - **Add a Game** - Add your favourite game.
 - **Preserve data**
-- **[Unit tests]**
+- **Unit tests**
 
 
 

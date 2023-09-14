@@ -31,7 +31,6 @@ module BookAndLabel
   end
 
   def add_label
-    puts 'Add a label'
     color = get_input('Enter Label Color')
     title = get_input('Enter Label title')
     label = Label.new(color: color, title: title)
