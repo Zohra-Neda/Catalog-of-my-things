@@ -97,7 +97,7 @@ Start using the app today to create a personalized catalog of your favorite book
 
 ## 🚀 Project Presentation Video <a name="project-presentation-video"></a>
 
-- <a href="https://drive.google.com/file/d/1QNd-UiTDEsVLoR5ZxPiheNt93YbOKxAz/view?usp=sharing" target="_blank">Project Presentation Video Link</a>
+- <a href="https://drive.google.com/file/d/1_eQyorCy0a2bsVxyFfjBl0lC0HY0oYKa/view?usp=sharing" target="_blank">Project Presentation Video Link</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -163,7 +163,7 @@ rspec spec
 
 👤 **Olanike Olatunji**
 
-- GitHub: [@olanikegloria](github.com/olanikegloria)
+- GitHub: [@olanikegloria](https://github.com/olanikegloria)
 - LinkedIn: [olanikegloria](https://www.linkedin.com/in/olani/)
 
 👤 **Adeyemi Dada**
