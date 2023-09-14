@@ -1,0 +1,20 @@
+[
+  {
+    "id": 6142,
+    "publish_date": "2009-01-01",
+    "on_spotify": true,
+    "genre": "POP"
+  },
+  {
+    "id": 8242,
+    "publish_date": "2009-09-09",
+    "on_spotify": true,
+    "genre": "Comedy"
+  },
+  {
+    "id": 1604,
+    "publish_date": "2022-09-09",
+    "on_spotify": true,
+    "genre": "Comedy"
+  }
+]
